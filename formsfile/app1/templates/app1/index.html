@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>practice</title>
+</head>
+<body>
+<form action="" method="post" novalidate>{% csrf_token %}
+<h3>User creation form</h3>
+    {% for fm in form %}
+    {{fm}} {{fm.label_tag}} {{fm.error|striptags}}<br><br>
+    {% endfor %}
+    <input type="submit" value="submit">
+
+</form>
+{{messages}}
+</body>
+</html>
